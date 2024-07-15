@@ -75,7 +75,7 @@ const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3001/auth/register", {
+      await axios.post("https://recipe-app-mern-tan.vercel.app/auth/register", {
         username,
         password,
       });
