@@ -24,7 +24,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const result = await axios.post("http://localhost:3001/auth/login", {
+      const result = await axios.post("https://recipe-app-mern-tan.vercel.app/auth/login", {
         username,
         password,
       });

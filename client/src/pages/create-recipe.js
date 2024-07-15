@@ -40,7 +40,7 @@ export const CreateRecipe = () => {
     event.preventDefault();
     try {
       await axios.post(
-        "http://localhost:3001/recipes",
+        "https://recipe-app-mern-tan.vercel.app/recipes",
         { ...recipe },
         {
           headers: { authorization: cookies.access_token },
