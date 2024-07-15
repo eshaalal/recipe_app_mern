@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin:["https://vercel.com/esha-lals-projects/recipe-app-mern2/618XZuU2febx1m3p9hrisF2mvu6J"],
+    origin:["https://recipe-app-mern-tan.vercel.app"],
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }));
