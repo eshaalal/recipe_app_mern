@@ -1,5 +1,4 @@
-/* app.css */
-
+/* Reset default browser styles */
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +7,7 @@ body {
   color: #4e342e; /* Dark brown text */
 }
 
+/* Main container for the entire app */
 .App {
   display: flex;
   flex-direction: column;
@@ -15,14 +15,16 @@ body {
   align-items: center;
 }
 
+/* Auth section styles */
 .auth {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Full viewport height */
   background-color: #fff3e0; /* Light peach background */
 }
 
+/* Styling for authentication containers */
 .auth-container {
   display: flex;
   flex-direction: column;
@@ -36,18 +38,21 @@ body {
   width: 400px;
 }
 
+/* Form group styling */
 .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
+/* Label styling */
 label {
   font-weight: bold;
   margin-bottom: 5px;
   color: #4e342e; /* Dark brown text */
 }
 
+/* Input field styling */
 input {
   padding: 10px;
   font-size: 16px;
@@ -55,6 +60,7 @@ input {
   border: 1px solid #8d6e63; /* Light brown border */
 }
 
+/* Submit button styling */
 button[type="submit"] {
   background-color: #ff7043; /* Bright orange button */
   color: white;
@@ -69,6 +75,7 @@ button[type="submit"]:hover {
   background-color: #e64a19; /* Darker orange on hover */
 }
 
+/* Authentication toggle button styling */
 .auth-toggle button {
   background-color: #ffab91; /* Light orange buttons */
   color: white;
@@ -89,17 +96,19 @@ button[type="submit"]:hover {
   background-color: #ff8a65; /* Darker orange on hover */
 }
 
+/* Navbar styling */
 .navbar {
-  margin: 0;
   width: 100%;
-  height: 80px;
+  height: 80px; /* Navbar height */
   background-color: #4e342e; /* Dark brown navbar */
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Items spaced evenly */
   align-items: center;
   color: white;
+  padding: 0 20px; /* Padding on left and right */
 }
 
+/* Link styling */
 a {
   color: white;
   text-decoration: none;
@@ -107,6 +116,7 @@ a {
   font-size: 25px;
 }
 
+/* Create recipe section styling */
 .create-recipe {
   display: flex;
   flex-direction: column;
@@ -125,12 +135,14 @@ a {
   flex-direction: column;
 }
 
+/* List styling */
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* List item styling */
 li {
   border: 1px solid #8d6e63; /* Light brown border */
   padding: 10px;
@@ -139,11 +151,13 @@ li {
   background-color: #ffccbc; /* Peach background */
 }
 
+/* Heading 2 styling */
 h2 {
   margin-top: 0;
   color: #4e342e; /* Dark brown text */
 }
 
+/* Image styling */
 img {
   max-width: 100%;
   height: auto;
@@ -151,8 +165,49 @@ img {
   border-radius: 10px;
 }
 
+/* Paragraph styling */
 p {
   max-width: 400px;
   font-size: 14px;
   color: #4e342e; /* Dark brown text */
+}
+
+/* Media Queries for Responsive Design */
+
+/* For screens smaller than 768px (typical tablets and phones) */
+@media screen and (max-width: 768px) {
+  .auth-container,
+  .create-recipe {
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 10px; /* Add margin for spacing */
+  }
+
+  .navbar {
+    height: 60px; /* Adjust navbar height for smaller screens */
+    padding: 0 10px; /* Reduce padding for smaller screens */
+  }
+
+  .navbar a {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  /* Adjust other styles as needed */
+}
+
+/* For screens smaller than 480px (typical smartphones) */
+@media screen and (max-width: 480px) {
+  .auth-container,
+  .create-recipe {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .navbar {
+    padding: 0 5px; /* Further reduce padding for very small screens */
+  }
+
+  .navbar a {
+    font-size: 18px; /* Further reduce font size for very small screens */
+  }
+
+  /* Adjust other styles for very small screens */
 }
