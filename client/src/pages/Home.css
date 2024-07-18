@@ -30,36 +30,41 @@ body {
   }
   
   .recipe-item {
-    display: flex; /* Ensure items are displayed in a row */
-    align-items: center; /* Center items vertically */
     border: 1px solid #8d6e63; /* Light brown border */
-    padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     background-color: #ffccbc; /* Peach background */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .recipe-item img {
-    width: 50%; /* Image takes 50% width of its container */
-    max-height: 100px; /* Limit maximum height */
-    margin-right: 20px; /* Margin to separate image from text */
-    border-radius: 10px;
+    overflow: hidden; /* Ensure child elements don't overflow */
   }
   
   .recipe-details {
-    flex: 1; /* Take remaining space in the flex container */
+    padding: 20px;
   }
   
-  .recipe-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .recipe-header h2 {
+  .recipe-details h2 {
     margin-top: 0;
     color: #4e342e; /* Dark brown text */
+  }
+  
+  .recipe-details p {
+    color: #4e342e; /* Dark brown text */
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-details img {
+    width: 100%; /* Image takes full width of container */
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  .recipe-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px 20px;
   }
   
   button.save {
@@ -72,26 +77,8 @@ body {
     border-radius: 5px;
   }
   
-  button.saved {
-    background-color: #e64a19; /* Darker orange for saved button */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: not-allowed;
-    border-radius: 5px;
-  }
-  
   button.save:hover {
     background-color: #e64a19; /* Darker orange on hover */
-  }
-  
-  .instructions {
-    margin: 10px 0;
-  }
-  
-  .recipe-item p {
-    color: #4e342e; /* Dark brown text */
-    font-size: 16px;
   }
   
   /* Media Queries for Responsive Design */
@@ -103,23 +90,18 @@ body {
     }
   
     .recipe-item {
-      flex-direction: column; /* Stack items vertically */
-      align-items: flex-start; /* Align items to the start */
+      margin-bottom: 10px;
     }
   
-    .recipe-item img {
-      width: 100%; /* Full width for smaller screens */
-      max-height: unset; /* Remove maximum height */
-      margin-right: 0; /* Remove margin for stacking */
-      margin-bottom: 10px; /* Add bottom margin for separation */
+    .recipe-details {
+      padding: 10px;
     }
   
-    .recipe-header h2 {
+    .recipe-details h2 {
       font-size: 20px;
     }
   
-    button.save,
-    button.saved {
+    .recipe-button {
       padding: 8px 16px;
     }
   }
@@ -130,16 +112,11 @@ body {
       width: 100%;
     }
   
-    .recipe-item {
-      padding: 10px;
-    }
-  
-    .recipe-header h2 {
+    .recipe-details h2 {
       font-size: 18px;
     }
   
-    button.save,
-    button.saved {
+    .recipe-button {
       padding: 6px 12px;
     }
   }
