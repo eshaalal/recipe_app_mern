@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
+import "./Home.css"; // Import the CSS file
 
 export const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -31,7 +32,7 @@ export const Home = () => {
 
     fetchRecipes();
     fetchSavedRecipes();
-  }, []);
+  }, [userID]);
 
   const saveRecipe = async (recipeID) => {
     try {
@@ -48,16 +49,17 @@ export const Home = () => {
   const isRecipeSaved = (id) => savedRecipes.includes(id);
 
   return (
-    <div>
+    <div className="home-recipes">
       <h1>Recipes</h1>
       <ul>
         {recipes.map((recipe) => (
-          <li key={recipe._id}>
-            <div>
+          <li key={recipe._id} className="recipe-item">
+            <div className="recipe-header">
               <h2>{recipe.name}</h2>
               <button
                 onClick={() => saveRecipe(recipe._id)}
                 disabled={isRecipeSaved(recipe._id)}
+                className={isRecipeSaved(recipe._id) ? "saved" : "save"}
               >
                 {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
               </button>

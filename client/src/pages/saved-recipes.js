@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
+import "./SavedRecipes.css"; // Import the CSS file
 
 export const SavedRecipes = () => {
   const [savedRecipes, setSavedRecipes] = useState([]);
@@ -19,13 +20,14 @@ export const SavedRecipes = () => {
     };
 
     fetchSavedRecipes();
-  }, []);
+  }, [userID]);
+  
   return (
-    <div>
+    <div className="saved-recipes">
       <h1>Saved Recipes</h1>
       <ul>
         {savedRecipes.map((recipe) => (
-          <li key={recipe._id}>
+          <li key={recipe._id} className="recipe-item">
             <div>
               <h2>{recipe.name}</h2>
             </div>
