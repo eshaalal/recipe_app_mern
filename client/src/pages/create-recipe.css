@@ -1,0 +1,94 @@
+.create-recipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffccbc; /* Peach container background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  .create-recipe h2 {
+    margin-top: 0;
+    color: #4e342e; /* Dark brown text */
+  }
+  
+  .create-recipe-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4e342e; /* Dark brown text */
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #8d6e63; /* Light brown border */
+    background-color: #fff3e0; /* Light peach background */
+    color: #4e342e; /* Dark brown text */
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button[type="button"] {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7043; /* Bright orange button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+  }
+  
+  .create-recipe-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c; /* Bright green button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .create-recipe-button:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .create-recipe {
+      width: 90%; /* Adjust width for smaller screens */
+      margin: 10px; /* Add margin for spacing */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .create-recipe {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+  
