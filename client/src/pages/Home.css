@@ -26,7 +26,7 @@ body {
     padding: 0;
     margin: 0;
     width: 100%;
-    max-width: 800px;
+    max-width: 800px; /* Limit width to ensure responsiveness */
   }
   
   .recipe-item {
@@ -40,6 +40,8 @@ body {
   
   .recipe-details {
     padding: 20px;
+    width: 100%; /* Take full width of the .recipe-item */
+    box-sizing: border-box; /* Include padding in width calculation */
   }
   
   .recipe-details h2 {
@@ -54,7 +56,7 @@ body {
   }
   
   .recipe-details img {
-    width: 100%; /* Image takes full width of container */
+    width: 100%; /* Image takes full width of .recipe-details */
     height: auto;
     margin-top: 10px;
     border-radius: 10px;
